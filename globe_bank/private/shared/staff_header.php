@@ -1,9 +1,12 @@
+<?php 
+	if (!isset($page_title)) {$page_title = 'Staff Area';}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>GBI</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/staff.css">
+	<title>GBI - <?php echo $page_title; ?> </title>
+	<link rel="stylesheet" type="text/css" href="<?php echo url_for("/stylesheets/staff.css"); ?>" />
 </head>
 <body>
 	<header>
@@ -11,6 +14,6 @@
 	</header>
 	<navigation>
 		<ul>
-			<li><a href="index.php">Menu</a></li>
+			<li><a href="<?php echo url_for ('/staff/index.php'); ?>">Menu</a></li>
 		</ul>
 	</navigation>
